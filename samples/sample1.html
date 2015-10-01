@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge' /> 
+	<title>SAPUI 5</title>
+	 <script id='sap-ui-bootstrap' 
+        src='../openui5-runtime-1.30.8/resources/sap-ui-core.js'  
+        data-sap-ui-theme='sap_bluecrystal'  
+        data-sap-ui-libs='sap.m'></script>   
+	<script>  
+	    var btn = new sap.m.Button({  
+	        text:'Hello World',  
+	        press:function(){alert('Hello Guys!')}  
+	    }); 
+	    var btn1 = new sap.m.Button({  
+	        text:'Hello',  
+	        press:function(){alert('Hello Guys!!!!')}  
+	    }); 
+	    btn.placeAt('content');  
+	    btn1.placeAt('mybtn');
+	</script>
+</head>
+<body  class='sapUiBody'>
+	<h1>Hello world</h1>
+	<div id='content'></div>
+	<div id="mybtn"></div>
+</body>
+</html>
