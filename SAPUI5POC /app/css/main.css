@@ -1,0 +1,305 @@
+@charset "UTF-8";
+
+#oMainTab-0,#oMainTab-1,#oMainTab-2,#oMainTab-3,#oMainTab-4{
+
+	width: 17%;
+    height: 40px !important;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+        color: white;
+}
+
+.sapUiTabBarCnt{
+	    height: 50px;
+	       margin: 0 5% 0 10%;
+}
+
+.sapUiTabPanel{
+	margin-top: 25px;
+}
+
+.sapMTileContent{
+
+	background-color: #29807F;
+
+}
+.sapMStdTileTitle{
+	color: #fff;
+    font-size: 23px;
+    text-align: center;
+}
+.sapMStdTileIconDiv{
+	color: beige;
+	margin-left: 10px;
+}
+
+ .sapUiAppHdr{
+ 	background-color: #29807f;
+ 	background-image:none;
+ 	    height: 40px;
+ 	} 
+ 	.sapUiTab, .sapUiTabSel, .sapUiTabDsbl {
+ 		  background-color:  #7B7679;
+ 	}
+ 	.sapUiTab:focus{
+ 		background-color: #29807F;
+ 		    border: 1px solid  #29807F;
+ 	}
+ 	.sapUiTabSel:focus{
+ 		background-color: #29807F;
+ 		    border: 1px solid  #29807F;
+ 	}
+ 	.sapUiTabDsbl:focus{
+ 		background-color: #29807F;
+ 		    border: 1px solid  #29807F;
+ 	}
+ 	.sapUiTabSel:hover{
+ 		background-color:#988B6C;
+ 	}
+
+ 	/*........................................................*/
+
+ 	@charset "UTF-8";
+
+#tb2 {
+	background-color:black;
+	height: 35px;
+}
+
+#logolabel2 {
+	color:white;
+	margin-left: -5px;
+	font-weight:bold;
+	font-size: 16px;
+	 margin-top: 5px;
+	
+}
+
+#logolabel{
+	color:green;
+	font-weight:900;
+	font-size: 16px;
+	margin-top: 5px;
+	
+}
+
+#i1 {
+	font-color:white;
+}
+
+#t1{
+	font-size:22px;
+}
+#t2{
+	font-size:24px;
+	font-weight:bolder;
+	margin-left: 5px;
+	
+}
+
+#G1,#G2,#G3,#G4{
+	font-size:16px;
+	font-weight:bold;
+}
+
+#im1,#im2,#im3,#im4{
+	margin-left:20px;
+}
+
+#tb1{
+	margin-top:30px !important;
+}
+
+#TabStrip1{
+	background-color:black;
+	
+}
+
+#TabStrip1-0,#TabStrip1-1,#TabStrip1-2 {
+	background-color:black;
+	color:white;
+}
+#logoutIconID{
+	margin-top:5px;
+}
+
+#logoId{
+	margin-top:5px;
+}
+
+#simpleSearch{
+	margin-top:5px;
+	width:200px;
+}
+#toolbar2{
+	padding-top:10px;
+	padding-bottom:10px;
+	height:30px
+}
+#Export{
+	background-color:black;
+	color:white;
+}
+#Create{
+	background-color:Turquoise;
+	color:white;
+}
+#matrix2{
+		margin-top: 25px;
+		}
+		
+		#Subheader{
+		font-size:40px;
+		}
+		#sub2{
+		color:#ccc;
+		margin-bottom:30px;
+		font-size:17px;
+		
+		}
+		#sub1{
+		color:#ccc;
+		font-size:17px;
+		margin-bottom:30px;
+		}
+		#Text{
+		margin-top:15px;
+			margin-bottom:15px;
+		
+		font-size:40px;
+		}
+		#Tb{
+		background-color:#444141;
+		color:white;
+		border:none !important;
+		height: 40px;
+    padding-top: 15px;
+    margin-bottom: 15px;
+		}
+		
+		#TV-head{
+		color:white;
+		  font-size: 15px;
+		}
+		#TV-head1{
+		color:white;
+		margin-right: 20px;
+    font-size: 15px;
+		}
+		
+		.sapUiTbStandalone .sapUiTbCont{
+		border-style:none;}
+		
+		#Cities1, #Cities, #TName, #DP-Date, #D-Date, #Cities2, #POSDate, #PoDate, #STDate, #SEDate{
+		height:25px;
+		}
+		
+		#t1{
+ font-size:22px;
+margin-top:15px;
+margin-bottom:10px;
+}
+#t2{
+ font-size:24px;
+ font-weight:bolder;
+ margin-left:5px;
+ margin-top:15px;
+ margin-bottom:10px;
+
+ 
+}
+
+#Continue{
+float:right;
+}
+
+#Tb1{
+margin-bottom:25px;
+}
+
+.sapUiTfStd>.sapUiTfComboIcon{
+height:23px;
+}
+#text{
+margin-left: 195px;
+}
+
+#Cancel{
+background-color:#0D0D58;
+height:30px;
+color:white;
+border:none;
+}
+
+#Continue{
+background-color:#79D668;
+color:white;
+border:none;
+height:30px;
+}
+#Name, #PType, #SDate, #ISDate, #PNode, #PLevel, #SgDate, #SgjDate, #SSDate, #ShipmentDate, #comment{
+font-size:14px;
+font-weight:bold;
+}
+
+#TName, #Cities, #DP-Date, #D-Date{
+margin-bottom:20px;
+}
+
+#Cities1, #Cities2, #POSDate, #PoDate{
+margin-bottom:20px;
+}
+
+#STDate, #SEDate{
+margin-bottom:20px;
+}
+
+
+.LoginControl{
+		width: 340px;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-raduis: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin: 0 auto;
+    background-color: beige;
+    top:150px;
+    }
+    #__button0,#__button1,#__button3,#__button4{
+    background-color: #138FDA;
+    color: white;
+    border:none;
+    }
+    #matrix4{
+    border-collapse: initial !important;
+    border: 1px solid #ccc;
+    width:0 !important;
+    margin: 0 auto;
+    padding: 10px;
+    background-color:beige;}
+    #__cell109{
+    text-align:center;}
+    #button1{
+    width:100px;
+     background-color: #138FDA;
+     color:white;
+    }
+    .sapUiLbl{
+ font-size: 13px;
+ font-weight: bold;
+}
+.suiteUiCardContainer{
+ background-color: beige;
+ border: 1px solid green;
+}
+
+.suiteUiCard{
+ margin:20px 0 20px 45px;
+   
+}
