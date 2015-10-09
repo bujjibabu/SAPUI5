@@ -17,6 +17,10 @@
 .sapUiBody{
 	background: #f4f5f5 !important;
 }
+.sapUiTabBar {
+    height: 55px;
+    background-color: #f4f5f5;
+}
 .sapMGlobalBackgroundColor{
 	background-color: #f2f2f2 !important;
 }
@@ -30,17 +34,15 @@
 }
 
 .sapMTileContent{
-
-	background-color: #29807F;
-
+	box-shadow: 2px 2px 8px #ccc;
+    color: #444;
 }
 .sapMStdTileTitle{
-	color: #fff;
+	color: #444;
     font-size: 23px;
     text-align: center;
 }
 .sapMStdTileIconDiv{
-	color: beige;
 	margin-left: 10px;
 }
 
@@ -340,12 +342,20 @@ margin-bottom:20px;
     font-size: 16px;
 }
 .sapUiAcdSectionHdr>div{
-	    height: 40px;
-    background-color: peachpuff;
-    color: black;
-    font-size: 18px;
-    font-weight: 900;
+    font-size: 12px;
+    margin-top: 10px;
+    height: 35px;
+    padding-top: 10px;
 }
+.sapUiAcd.ui-sortable{
+	background: #f4f5f5;
+	box-shadow: 2px 2px 8px #ccc;
+	border: none;
+}
+.sapUiAcdSectionHdr{
+background-color: #007cc0;
+}
+    
 #__taker0{
  width:100% !important;
  margin: 20px auto;
