@@ -38,7 +38,7 @@ sap.ui.controller("view.Login", {
 	
 
 	save: function(name , pwd){
-		if (name == localStorage.getItem("userName") && pwd == localStorage.getItem("pwd") ){
+		if (name == "John" && pwd == "Smith" ){
 			var apph = sap.ui.getCore().byId("appheader");
 					apph.setDisplayWelcome(true);
 					apph.setDisplayLogoff(true);
@@ -47,8 +47,6 @@ sap.ui.controller("view.Login", {
 			id : "Main"
 		});
 			//window.location.href="https://sapui5.netweaver.ondemand.com/sdk/#test-resources/sap/ui/commons/demokit/MatrixLayout.html";
-		} else {
-			alert("Invalid Credentials");
 		}
 		
 	},

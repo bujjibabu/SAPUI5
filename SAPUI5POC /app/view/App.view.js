@@ -25,7 +25,7 @@ sap.ui.jsview("view.App", {
 		this.app.addPage( sap.ui.jsview("Notes", "view.Notes"));
 		this.app.addPage( sap.ui.jsview("Contacts", "view.Contacts"));
 		
-        var user = localStorage.getItem("userName");
+
 		var appHeader = new sap.ui.commons.ApplicationHeader("appheader");
    			appHeader.attachLogoff(function logoffPage(oEvent)
    					{
@@ -33,27 +33,24 @@ sap.ui.jsview("view.App", {
 				   sap.ui.commons.MessageBox.show("Are you sure want to logoff from this page?",
 				    sap.ui.commons.MessageBox.Icon.INFORMATION,
 				    "Logoff Confirmation",
-				     [sap.ui.commons.MessageBox.Action.OK,sap.ui.commons.MessageBox.Action.CANCEL],function(oEvent){
-				     	if(oEvent == "OK"){
-
-				     var apph = sap.ui.getCore().byId("appheader");
+				     [sap.ui.commons.MessageBox.Action.OK,sap.ui.commons.MessageBox.Action.CANCEL],function(){
+				     	var apph = sap.ui.getCore().byId("appheader");
 					apph.setDisplayWelcome(false);
 					apph.setDisplayLogoff(false);
 				     	var bus = sap.ui.getCore().getEventBus();
 							bus.publish("nav", "to", { 
 								id : "Login"
 							});
-						}
 
 				     }
 				   ); 
-				    });
+				    }   );
   
    appHeader.setDisplayLogoff(false);
    appHeader.setDisplayWelcome(false);
    appHeader.setLogoSrc("images/logo.jpg");
    appHeader.setLogoText("SAPUI5 POC");
-   appHeader.setUserName(user);
+   appHeader.setUserName("John");
   
      appHeader.placeAt("content");
 
