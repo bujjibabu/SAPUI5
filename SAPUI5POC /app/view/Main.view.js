@@ -7,6 +7,7 @@ sap.ui.jsview("view.Main", {
 	createContent : function (oController) {
 
 		this.page = new sap.m.Page({
+			showNavButton :true,
 			showHeader:false,
 			content: [],
 			footer: []
@@ -22,13 +23,16 @@ sap.ui.jsview("view.Main", {
 
 		
 		 var DashboardView = sap.ui.jsview("view.Dashboard").page;
-		 var Tableview = sap.ui.jsview("view.Home").page;
+		 var Notesview = sap.ui.jsview("view.Notes").page;
 		 var TeamView = sap.ui.jsview("view.Business").page;
+		 var aboutView = sap.ui.jsview("view.About").page;
+		  var ContactsView = sap.ui.jsview("view.Contacts").page;
+
 			
 			oMainTab.createTab("Home",DashboardView);
-			oMainTab.createTab("Products",Tableview);
-			oMainTab.createTab("About");
-			oMainTab.createTab("Contacts");
+			oMainTab.createTab("To Do's",Notesview);
+			oMainTab.createTab("About",aboutView);
+			oMainTab.createTab("Contacts",ContactsView);
 			oMainTab.createTab("Team",TeamView);
 		
 		this.page.addContent(oMainTab);

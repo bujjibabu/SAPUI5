@@ -303,3 +303,49 @@ margin-bottom:20px;
  margin:20px 0 20px 45px;
    
 }
+.sapUiFTV strong, .sapUiFTVBold{
+	 font-weight: bold;
+    color: indigo;
+    font-size: 16px;
+}
+.sapUiAcdSectionHdr>div{
+	    height: 40px;
+    background-color: peachpuff;
+    color: black;
+    font-size: 18px;
+    font-weight: 900;
+}
+#__taker0{
+ width:100% !important;
+ margin: 20px auto;
+}
+
+#__image0{
+    margin-left: 20%;
+    margin-top: 3%;
+}
+#__layout7{
+	    margin-top: 5%;
+    margin-left: 4%;
+}
+.mybackground{
+	background-image: url('/images/sap2.jpg');
+
+}
+.mybackground1{
+	background-image: url('/images/world.png');
+	}
+
+	.sapUiLbl.sapUiLblReqEnd:after, .sapUiLbl.sapUiLblReqBeg:before{
+		    color: #e52929;
+	}
+
+	#appheader-logoText{
+	margin: 5% 0 0 4%;
+    font-size: 16px;
+		
+	}
+	#appheader-logoImg{
+		    width: 30px;
+    margin-top: 4%;
+	}

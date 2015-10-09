@@ -12,22 +12,48 @@ sap.ui.jsview("view.Modal", {
 			footer: []
 		});
 
-	/*	var oBtnBack = new sap.ui.commons.Button({
-					text : "Back",
-					enabled : false,
-					press : function() {
-						
-						oBtnBack.setEnabled(false);
-					}
+	var oTwoDaysAgo = new Date();
+	oTwoDaysAgo.setDate(oTwoDaysAgo.getDate() - 2);
+	var oFinanceArticle = new sap.suite.ui.commons.FeedItem({
+		title: "Help! My Sister Wants Me Off Her Credit Cards",
+		image: "images/balloons.jpg",
+		link: "http://finance.yahoo.com/news/help-sister-wants-off-her-110045864.html",
+		source: "Yahoo Finance", 
+		publicationDate: oTwoDaysAgo		
+	});
+	
+	var oHourAgo = new Date();
+	oHourAgo.setHours(oHourAgo.getHours() - 1);
+	var oStyleArticle = new sap.suite.ui.commons.FeedItem({
+		title: "How To Be In Style This Season",
+		image: "images/grass.png",
+		link: "http://www.zappos.com/",
+		source: "Zappos", 
+		publicationDate: oHourAgo		
+	});	
+	
+	var articles = new Array();
+	articles.push(oStyleArticle);
+	articles.push(oFinanceArticle);
+	
+	var oFeedTile = new sap.suite.ui.commons.FeedTile({
+		items: articles,
+		displayDuration: 3,
+	});
+	
+	// Create a container for the FeedTile with a specified height and width 
+	var oBorderLayout = new sap.ui.commons.layout.BorderLayout({width: "400px", height: "200px"});
 
-				});
-		var oBtnNext = new sap.ui.commons.Button({
-					text : "Next",
-					press : function() {
-						
-						oBtnBack.setEnabled(true);
-					}
-				});*/
+	// Add the FeedTile to the container
+	oBorderLayout.createArea(sap.ui.commons.layout.BorderLayoutAreaTypes.top, oFeedTile );
+	oBorderLayout.setAreaData(sap.ui.commons.layout.BorderLayoutAreaTypes.top, {
+		size : "100%",
+		visible : true
+	});
+   
+	//oBorderLayout.placeAt("basic");
+
+
 		var oBtnCancel = new sap.ui.commons.Button({
 					text : "Cancel",
 					press : function() {
@@ -44,7 +70,9 @@ sap.ui.jsview("view.Modal", {
           content : [  ]
         });
 		
+		oDialog.addContent(oBorderLayout);
 		this.page.addContent(oDialog);
+
 
 		var footer = new sap.m.Bar({
 			contentMiddle: [

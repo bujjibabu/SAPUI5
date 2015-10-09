@@ -15,9 +15,9 @@ sap.ui.jsview("view.Carousel", {
 oCarousel.setWidth("100%");
 oCarousel.setOrientation("horizontal");
 oCarousel.addContent(new sap.ui.commons.Image("img1", {
-    src: "images/b.jpg",
+    src: "images/b3.jpg",
     alt: "img1",
-    width: "1000px",
+    width: "100%",
     height: "600px"
 
 }));
@@ -37,9 +37,9 @@ oCarousel.addContent(new sap.ui.commons.Image("img3", {
 }));
 
 oCarousel.addContent(new sap.ui.commons.Image("img4", {
-    src: "images/b3.jpg",
+    src: "images/b.jpg",
     alt: "img1",
-    width: "100%",
+    width: "1000px",
     height: "600px"
 }));
 
@@ -55,7 +55,11 @@ oCPanel.setBorderDesign(sap.ui.commons.enums.BorderDesign.None);
 oCPanel.addContent(oCarousel);
 	
 
+    
+
         this.page.addContent(oCPanel);
+
+
         var footer = new sap.m.Bar({
             contentMiddle: [
                 new sap.m.Link({

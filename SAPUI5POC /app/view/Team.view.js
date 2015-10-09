@@ -121,7 +121,7 @@ sap.ui.jsview("view.Team", {
         
 
 		this.page.addContent();
-
+/*
 		var footer = new sap.m.Bar({
 			contentMiddle: [
 				new sap.m.Link({
@@ -131,7 +131,7 @@ sap.ui.jsview("view.Team", {
 			]
 		});
 
-		this.page.setFooter(footer);
+		this.page.setFooter(footer);*/
 
 		return this.page;
 	}

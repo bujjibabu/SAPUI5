@@ -26,6 +26,14 @@ sap.ui.controller("view.Dashboard", {
 		var dailog = sap.ui.getCore().byId("dialog");
 			dailog.open();
 		
+	},
+
+	onTablePress:function(){
+		var bus = sap.ui.getCore().getEventBus();
+		bus.publish("nav", "to", { 
+			id : "Table"
+		});
+		
 	}
 
 });

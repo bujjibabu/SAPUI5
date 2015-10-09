@@ -66,8 +66,11 @@ sap.ui.jsview("view.Products", {
             dataset: oDataset
         });
 
-
+var bBusy = !oColumnChart.isBusy();
+oColumnChart.setBusy(bBusy);
         oColumnChart.setModel(oModel);
+           oColumnChart.setBusyIndicatorDelay(100);
+           
 
 
         var oDataset = new sap.viz.ui5.data.FlattenedDataset({

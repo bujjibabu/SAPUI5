@@ -36,8 +36,12 @@ sap.ui.controller("view.Login", {
 //	}
   
 	
+
 	save: function(name , pwd){
 		if (name == "John" && pwd == "Smith" ){
+			var apph = sap.ui.getCore().byId("appheader");
+					apph.setDisplayWelcome(true);
+					apph.setDisplayLogoff(true);
 			var bus = sap.ui.getCore().getEventBus();
 		bus.publish("nav", "to", { 
 			id : "Main"
@@ -54,6 +58,5 @@ sap.ui.controller("view.Login", {
 		});
 
 	}
-
 	
 });

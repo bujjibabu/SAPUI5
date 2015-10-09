@@ -265,7 +265,7 @@ sap.ui.jsview("view.Business", {
 		this.page.addContent(oBusinesslayout);
         
 
-		var footer = new sap.m.Bar({
+	/*	var footer = new sap.m.Bar({
 			contentMiddle: [
 				new sap.m.Link({
 					text: "Deloitte Digital 2014-2015",
@@ -274,7 +274,7 @@ sap.ui.jsview("view.Business", {
 			]
 		});
 
-		this.page.setFooter(footer);
+		this.page.setFooter(footer);*/
 
 		return this.page;
 	}

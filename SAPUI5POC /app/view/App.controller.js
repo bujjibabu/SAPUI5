@@ -5,7 +5,7 @@ sap.ui.controller("view.App", {
 	
 	PAGE : {
 		
-		Home: 				{ type : "JS", 		app : "App",		master : undefined},
+		Table: 				{ type : "JS", 		app : "App",		master : undefined},
 		Main: 				{ type : "JS", 		app : "App",		master : undefined},
 		Dashboard: 			{ type : "JS", 		app : "App",		master : undefined},
 		Products:           { type : "JS", 		app : "App",		master : undefined},
@@ -15,7 +15,10 @@ sap.ui.controller("view.App", {
 		Team:                 { type : "JS", 		app : "App",		master : undefined},
 		Business: { type : "JS", 		app : "App",		master : undefined},
 		Login:    { type : "JS", 		app : "App",		master : undefined},
-		Signup: { type : "JS", 		app : "App",		master : undefined}
+		Signup: { type : "JS", 		app : "App",		master : undefined},
+		About:   { type : "JS", 		app : "App",		master : undefined},
+		Notes:  { type : "JS", 		app : "App",		master : undefined},
+		Contacts:  { type : "JS", 		app : "App",		master : undefined}
 	},
 	
 	getDefaultPage : function() {

@@ -39,9 +39,7 @@
         }), new sap.m.StandardTile({
             icon : "sap-icon://excel-attachment",
             title : " Table",
-            press : function() {
-                //oController.nav.to("AfoStart");
-            }
+            press : [oController.onTablePress, oController]
         })
 
          ],
@@ -49,7 +47,7 @@
     });
 		
 		this.page.addContent(tileContainer);
-		var footer = new sap.m.Bar({
+		/*var footer = new sap.m.Bar({
 			contentMiddle: [
 				new sap.m.Link({
 					text: "Deloitte Digital 2014-2015",
@@ -58,7 +56,7 @@
 			]
 		});
 
-		this.page.setFooter(footer);
+		this.page.setFooter(footer);*/
 		return this.page;
 	}
 	

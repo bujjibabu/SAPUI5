@@ -56,6 +56,8 @@ sap.ui.jsview("view.Login", {
 		
 		//oLayout.placeAt("content");
 
+		this.page.addStyleClass("mybackground");
+
 		this.page.addContent(oLayout);
 
 			var footer = new sap.m.Bar({

@@ -19,6 +19,24 @@ sap.ui.jsview("view.Signup", {
 			content: [],
 			footer: []
 		});
+
+		//Local storage
+
+		var data = {"userName":"userName",
+		"LastName":"LastName",
+		"street":"street","pwd":"pwd","House":"House"};  
+
+		  // var oModel = new sap.ui.model.json.JSONModel();  
+		  // oModel.setData(data);  
+		  // //Storage  
+		  // jQuery.sap.require("jquery.sap.storage");  
+		  // oStorage = jQuery.sap.storage(jQuery.sap.storage.Type.local);  
+		  // //Check if there is data into the Storage  
+		  // if (oStorage.get("myLocalData")) {  
+		  // console.log("Data is from Storage!");  
+		  // var oData = oStorage.get("myLocalData");  
+		  // oModel.setData(oData);  
+		  // }  
 		/* tooltip function*/
 		function quickhelp(oControl, sText, bCustomize) {
 			// create the RichTooltip control 
@@ -61,17 +79,17 @@ var oLabel = new sap.ui.commons.Label({
 	//id : 'L-Name',
 	text : 'First Name' });
 
-var oTF = quickhelp( new sap.ui.commons.TextField({
+var oFname = quickhelp( new sap.ui.commons.TextField({
 	//id : 'TF-Name',
 	editable : true,
 	value : '',
 	width : '',required:true }),"Please Enter Name",true);
 
-oLabel.setLabelFor(oTF);
+oLabel.setLabelFor(oFname);
 
 oCell = new sap.ui.commons.layout.MatrixLayoutCell({colSpan:2});
 
-oMatrix.createRow(oLabel, oTF, oCell);
+oMatrix.createRow(oLabel, oFname, oCell);
 
 oLabel = new sap.ui.commons.Label({
 	//id : 'L-F-Name',
@@ -79,27 +97,27 @@ oLabel = new sap.ui.commons.Label({
 	required:true
 	});
 
-oTF = quickhelp(new sap.ui.commons.TextField({
+oName = quickhelp(new sap.ui.commons.TextField({
 	//id : 'TF-F-Name',
 	tooltip : 'First Name',
 	editable : true,
 	value : '',
 	width : '200px' }),"Please Enter LastName",true);
-oLabel.setLabelFor(oTF);
-oMatrix.createRow(oLabel, oTF);
+oLabel.setLabelFor(oName);
+oMatrix.createRow(oLabel, oName);
 
 oLabel = new sap.ui.commons.Label({
 	//id : 'L-Street',
 	text : 'Street, HouseNumber' });
 
-oTF =quickhelp( new sap.ui.commons.TextField({
+oStreet =quickhelp( new sap.ui.commons.TextField({
 	//id : 'TF-Street',
 	tooltip : 'Street',
 	editable : true,
 	value : '',
 	width : '150px' }),"Please Enter Street No",true);
-oLabel.setLabelFor(oTF);
-var oTF2 = quickhelp(new sap.ui.commons.TextField({
+oLabel.setLabelFor(oStreet);
+var oHouse = quickhelp(new sap.ui.commons.TextField({
 	//id : 'TF-HNum',
 	tooltip : 'House Number',
 	editable : true,
@@ -109,10 +127,46 @@ var oTF2 = quickhelp(new sap.ui.commons.TextField({
 	
 //multiple controls within one cell
 oCell = new sap.ui.commons.layout.MatrixLayoutCell();
-oCell.addContent(oTF); 
-oCell.addContent(oTF2); 
+oCell.addContent(oStreet); 
+oCell.addContent(oHouse); 
 oMatrix.createRow(oLabel, oCell);
 
+
+oLabel = new sap.ui.commons.Label({
+ 	//id : 'Email',
+ 	text : 'Password',
+  	required:true });
+ oPwd = quickhelp(new sap.ui.commons.TextField({
+ 	//id : 'mail',
+ 	editable : true,
+ 	width : '200px'
+ 	}),"Please enter Password");
+ oLabel.setLabelFor(oPwd);
+ oMatrix.createRow(oLabel, oPwd);
+
+ oLabel = new sap.ui.commons.Label({
+ 	//id : 'Email',
+ 	text : 'Confirm Password',
+ 	required:true });
+ oCPwd = quickhelp(new sap.ui.commons.TextField({
+ 	//id : 'mail',
+ 	editable : true,
+ 	width : '200px'
+ 	}),"Please confirm Password");
+ oLabel.setLabelFor(oCPwd);
+ oMatrix.createRow(oLabel, oCPwd);
+
+ oLabel = new sap.ui.commons.Label({
+ 	//id : 'Email',
+ 	text : 'Mobile',
+ 	required:true });
+ oMobile = quickhelp(new sap.ui.commons.TextField({
+ 	//id : 'mail',
+ 	editable : true,
+ 	width : '200px'
+ 	}),"Please enter mobile no.");
+ oLabel.setLabelFor(oMobile);
+ oMatrix.createRow(oLabel, oMobile);
 oLabel = new sap.ui.commons.Label({
 	//id : 'L-City',
 	text : 'City' });
@@ -125,7 +179,19 @@ oTF = quickhelp(new sap.ui.commons.TextField({
 	width : '200px' }),"Please Enter City",true);
 oLabel.setLabelFor(oTF);
 oMatrix.createRow(oLabel, oTF);
-	
+
+
+oLabel = new sap.ui.commons.Label({
+ 	//id : 'Email',
+ 	text : 'State'
+ });
+ oState = quickhelp(new sap.ui.commons.TextField({
+ 	//id : 'mail',
+ 	editable : true,
+ 	width : '200px'
+ 	}),"Please Enter State");
+ oLabel.setLabelFor(oState);
+ oMatrix.createRow(oLabel, oState);	
 oLabel = new sap.ui.commons.Label({
 	//id : 'L-Country',
 	text : 'Country' });
@@ -179,6 +245,7 @@ var oRBG = new sap.ui.commons.RadioButtonGroup({
 var oItem = new sap.ui.core.Item({
 	//id : 'RB-Male',
 	text : 'Male',
+	groupName : 'Group1',
 	tooltip : 'Gender: male',
 	key : 'male' });
 oRBG.addItem(oItem);
@@ -207,7 +274,24 @@ oMatrix.createRow(oLabel, oMail);
 var oButton = new sap.ui.commons.Button({
 	//id:'button1',
 	text:'save',
-	width:'100px'
+	width:'100px',
+	press : function() { 
+	// alert("Hello") ;
+ //  var oNew = {  
+ //  id : $.now()  
+ //  };  
+ //  var oData = oModel.getData();  
+ //  oData.Collection.push(oNew);  
+ //  oModel.refresh(true);  
+ //  oStorage.put("myLocalData", oData);  
+ localStorage.setItem(data.userName,oFname.getValue());
+ localStorage.setItem(data.LastName,oName.getValue());
+ localStorage.setItem(data.street,oStreet.getValue());
+ localStorage.setItem(data.House,oHouse.getValue());
+ localStorage.setItem(data.pwd,oPwd.getValue());
+ alert("Values saved successfully")
+  }  
+   
 });
 var oButton1 = new sap.ui.commons.Button({
 	//id:'button1',
@@ -217,11 +301,11 @@ var oButton1 = new sap.ui.commons.Button({
 		oController.cancel();
 	}
 });
-
+// oMatrix.setModel(oModel);
 oMatrix.createRow(oButton,oButton1);
 // attach it to some element in the page
 //oMatrix.placeAt('content');
-			
+		this.page.addStyleClass("mybackground1");	
 	this.page.addContent(oMatrix);
 
 		var footer = new sap.m.Bar({

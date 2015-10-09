@@ -12,7 +12,7 @@ sap.ui.jsview("view.App", {
 		this.app = new sap.m.App("App");
 		this.app.addPage( sap.ui.jsview("Login", "view.Login"));
 		this.app.addPage( sap.ui.jsview("Main", "view.Main"));
-		this.app.addPage( sap.ui.jsview("Home", "view.Home"));
+		this.app.addPage( sap.ui.jsview("Table", "view.Table"));
 		this.app.addPage( sap.ui.jsview("Dashboard", "view.Dashboard"));
 		this.app.addPage( sap.ui.jsview("Products", "view.Products"));
 		this.app.addPage( sap.ui.jsview("Form", "view.Form"));
@@ -21,6 +21,9 @@ sap.ui.jsview("view.App", {
 		this.app.addPage( sap.ui.jsview("Team", "view.Team"));
 		this.app.addPage( sap.ui.jsview("Business", "view.Business"));
 		this.app.addPage( sap.ui.jsview("Signup", "view.Signup"));
+		this.app.addPage( sap.ui.jsview("About", "view.About"));
+		this.app.addPage( sap.ui.jsview("Notes", "view.Notes"));
+		this.app.addPage( sap.ui.jsview("Contacts", "view.Contacts"));
 		
 
 		var appHeader = new sap.ui.commons.ApplicationHeader("appheader");
@@ -30,13 +33,22 @@ sap.ui.jsview("view.App", {
 				   sap.ui.commons.MessageBox.show("Are you sure want to logoff from this page?",
 				    sap.ui.commons.MessageBox.Icon.INFORMATION,
 				    "Logoff Confirmation",
-				     [sap.ui.commons.MessageBox.Action.OK,sap.ui.commons.MessageBox.Action.CANCEL]            
-				   );  
+				     [sap.ui.commons.MessageBox.Action.OK,sap.ui.commons.MessageBox.Action.CANCEL],function(){
+				     	var apph = sap.ui.getCore().byId("appheader");
+					apph.setDisplayWelcome(false);
+					apph.setDisplayLogoff(false);
+				     	var bus = sap.ui.getCore().getEventBus();
+							bus.publish("nav", "to", { 
+								id : "Login"
+							});
+
+				     }
+				   ); 
 				    }   );
   
-   appHeader.setDisplayLogoff(true);
-   appHeader.setDisplayWelcome(true);
-   appHeader.setLogoSrc();
+   appHeader.setDisplayLogoff(false);
+   appHeader.setDisplayWelcome(false);
+   appHeader.setLogoSrc("images/logo.jpg");
    appHeader.setLogoText("SAPUI5 POC");
    appHeader.setUserName("John");
   
