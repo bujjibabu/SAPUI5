@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 #oMainTab-0,#oMainTab-1,#oMainTab-2,#oMainTab-3,#oMainTab-4{
-
+	background-color: #757171;
 	width: 17%;
     height: 40px !important;
     border-top-left-radius: 10px;
@@ -11,7 +11,15 @@
     padding: 10px;
         color: white;
 }
-
+.main-body{
+	background: #f2f2f2;
+}
+.sapUiBody{
+	background: #f4f5f5 !important;
+}
+.sapMGlobalBackgroundColor{
+	background-color: #f2f2f2 !important;
+}
 .sapUiTabBarCnt{
 	    height: 50px;
 	       margin: 0 5% 0 10%;
@@ -37,9 +45,11 @@
 }
 
  .sapUiAppHdr{
- 	background-color: #29807f;
- 	background-image:none;
- 	    height: 40px;
+ 	background-color: rgb(70, 74, 76);
+ 	background-image: none;
+    border: 0px;
+    padding-top: 5px;
+    padding-bottom: 8px;
  	} 
  	.sapUiTab, .sapUiTabSel, .sapUiTabDsbl {
  		  background-color:  #7B7679;
@@ -259,7 +269,7 @@ margin-bottom:20px;
 
 
 .LoginControl{
-		width: 340px;
+	width: 340px;
     height: 150px;
     border: 1px solid #ccc;
     border-raduis: 5px;
@@ -268,8 +278,10 @@ margin-bottom:20px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     margin: 0 auto;
-    background-color: beige;
-    top:150px;
+    background-color: #070707;
+    top: 150px;
+    opacity: 0.95;
+    color: #fff !important;
     }
     #__button0,#__button1,#__button3,#__button4{
     background-color: #138FDA;
@@ -293,15 +305,30 @@ margin-bottom:20px;
     .sapUiLbl{
  font-size: 13px;
  font-weight: bold;
+ color:#fff;
 }
-.suiteUiCardContainer{
+.suiteUiCardName,
+.suiteUiCardDesc
+{
+	color:#444;
+}
+/*.suiteUiCardContainer{
  background-color: beige;
  border: 1px solid green;
+}*/
+.suiteUiCardIcon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #8C8A8A;
 }
-
 .suiteUiCard{
  margin:20px 0 20px 45px;
-   
+ box-shadow: 3px 3px 7px #868282;
+ background-color: #fff;  
+}
+.sapUiTabPanel {
+    background-color: #f4f5f5 !important;
 }
 .sapUiFTV strong, .sapUiFTVBold{
 	 font-weight: bold;
@@ -330,7 +357,7 @@ margin-bottom:20px;
 }
 .mybackground{
 	background-image: url('/images/sap2.jpg');
-
+	opacity: 0.88;
 }
 .mybackground1{
 	background-image: url('/images/world.png');
