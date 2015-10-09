@@ -12,25 +12,162 @@ sap.ui.jsview("view.Form", {
 			footer: []
 		});
 
+        var Header = new sap.m.Bar({
+
+            contentLeft: [
+                new sap.ui.commons.Button({
+                 icon:"sap-icon://nav-back",
+                 press: function(){
+                    oController.goback();
+                 }
+               })
+            ]
+        });
+        this.page.addContent(Header);
 	var oMatrix1 = new sap.ui.commons.layout.MatrixLayout({
             id: "matrix1",
             layoutFixed: true,
-            width: '100%',
+            width: '98%',
 
 
         });
         
-         var oTextView = new sap.ui.commons.TextView("t11");
-         oTextView.setText(" Create");
-         var oTextView2 = new sap.ui.commons.TextView("t22");
-         oTextView2.setText(" Promotion Event");
+         // var oTextView = new sap.ui.commons.TextView("t11");
+         // oTextView.setText(" Create ");
+         // var oTextView2 = new sap.ui.commons.TextView("t22");
+         // oTextView2.setText(" Promotion Event");
          
+         // var Cell1 = new sap.ui.commons.layout.MatrixLayoutCell({
+         //  });
+         // Cell1.addContent(oTextView);
+         // Cell1.addContent(oTextView2);
+              
+         //      oMatrix1.createRow(Cell1);
+
+          var oPanel = new sap.ui.commons.Panel("p1",{
+            showCollapseIcon:false
+          });
+     oPanel.setAreaDesign(sap.ui.commons.enums.AreaDesign.Plain);
+     oPanel.setBorderDesign(sap.ui.commons.enums.BorderDesign.None);
+     
+     var oMatrixC = new sap.ui.commons.layout.MatrixLayout({
+      layoutFixed: true,
+      columns : 5,
+      widths : ['40%', '15%', '15%', '15%', '15%']
+     });
+     
+     var oTextView = new sap.ui.commons.TextView("t1");
+     oTextView.setText(" Customer");
+     var oTextView2 = new sap.ui.commons.TextView("t2");
+     oTextView2.setText(" Promotions");
          var Cell1 = new sap.ui.commons.layout.MatrixLayoutCell({
           });
          Cell1.addContent(oTextView);
          Cell1.addContent(oTextView2);
-              
-              oMatrix1.createRow(Cell1);
+        var chart1 = sap.ui.getCore().byId("col1");
+        chart1.setHeight("100px");
+         chart1.setWidth("100px");
+        
+        
+
+     
+      var oImage1 = new sap.ui.commons.Image("im1");
+          oImage1.setSrc("https://cdn3.iconfinder.com/data/icons/flat-color-icons/504/area_chart-2-48.png");
+     
+          var G1 = new sap.ui.commons.TextField({
+       id : 'G1',
+       editable : false,
+       value: '$ 30,200,50'
+       });
+          var G11 = new sap.ui.commons.TextField({
+       id : 'G11',
+       editable : false,
+       value: 'Gross Rev Le'
+       });
+          
+          var Cell2 = new sap.ui.commons.layout.MatrixLayoutCell({
+       });
+          Cell2.addContent(chart1);
+          Cell2.addContent(G1);
+          Cell2.addContent(G11);
+
+          var chart2 = sap.ui.getCore().byId("SC");
+        chart2.setHeight("100px");
+         chart2.setWidth("100px");
+          
+          var oImage2 = new sap.ui.commons.Image("im2");
+          oImage2.setSrc("https://cdn3.iconfinder.com/data/icons/flat-color-icons/504/area_chart-2-48.png");
+     
+          var G2 = new sap.ui.commons.TextField({
+       id : 'G2',
+       editable : false,
+       value: '$ 10,200,0'
+       });
+          var G22 = new sap.ui.commons.TextField({
+       id : 'G22',
+       editable : false,
+       value: 'Fund Le'
+       });
+          
+          var Cell3 = new sap.ui.commons.layout.MatrixLayoutCell({
+       });
+          Cell3.addContent(chart2);
+          Cell3.addContent(G2);
+          Cell3.addContent(G22);
+
+          var chart3 = sap.ui.getCore().byId("LC");
+        chart3.setHeight("100px");
+         chart3.setWidth("100px");
+          
+          var oImage3 = new sap.ui.commons.Image("im3");
+          oImage3.setSrc("https://cdn3.iconfinder.com/data/icons/flat-color-icons/504/area_chart-2-48.png");
+     
+          var G3 = new sap.ui.commons.TextField({
+       id : 'G3',
+       editable : false,
+       value: '$ 10,200,0'
+       });
+          var G33 = new sap.ui.commons.TextField({
+       id : 'G33',
+       editable : false,
+       value: 'Spend Le'
+       });
+          
+          var Cell4 = new sap.ui.commons.layout.MatrixLayoutCell({
+       });
+          Cell4.addContent(chart3);
+          Cell4.addContent(G3);
+          Cell4.addContent(G33);
+
+          var chart4 = sap.ui.getCore().byId("MC");
+        chart4.setHeight("100px");
+         chart4.setWidth("100px");
+          
+          var oImage4 = new sap.ui.commons.Image("im4");
+          oImage4.setSrc("https://cdn3.iconfinder.com/data/icons/flat-color-icons/504/area_chart-2-48.png");
+     
+          var G4 = new sap.ui.commons.TextField({
+       id : 'G4',
+       editable : false,
+       value: '$ 10,200,0'
+       });
+          var G44 = new sap.ui.commons.TextField({
+       id : 'G44',
+       editable : false,
+       value: 'Balance Le'
+       });
+          
+          var Cell5 = new sap.ui.commons.layout.MatrixLayoutCell({
+       });
+          Cell5.addContent(chart4);
+          Cell5.addContent(G4);
+          Cell5.addContent(G44);
+          
+          oMatrixC.createRow(Cell1,Cell2,Cell3,Cell4,Cell5);
+          
+          oPanel.addContent(oMatrixC);
+
+          oMatrix1.createRow(oPanel);
 
              var oToolbar0 = new sap.ui.commons.Toolbar('Tb1');
                 oToolbar0.setDesign(sap.ui.commons.ToolbarDesign.Transparent);
@@ -54,11 +191,13 @@ sap.ui.jsview("view.Form", {
 
             var oTV = new sap.ui.commons.TextView({
                 id: 'TV-head',
-                text: 'Step 1 - Enter Basic Details',
+                text: 'Enter Basic Details',
                 design: sap.ui.commons.TextViewDesign.H1
             });
             
             oToolbar.addItem(oTV);
+      
+            oMatrix1.createRow(oToolbar);
             
           
             var oTV1 = new sap.ui.commons.TextView({
@@ -68,12 +207,13 @@ sap.ui.jsview("view.Form", {
             });
             
             oToolbar.addRightItem(oTV1);
+
             
         
         var oMatrix = new sap.ui.commons.layout.MatrixLayout({
             id: "matrix",
             layoutFixed: true,
-            width: '100%',
+            width: '98%',
         });
     
 
@@ -336,8 +476,8 @@ sap.ui.jsview("view.Form", {
     var oMatrix2 = new sap.ui.commons.layout.MatrixLayout({
         id: "matrix2",
         layoutFixed: true,
-        width: '100%',
-        columns:3
+        width: '98%',
+        columns:2
     });
     
     var oButton1 = new sap.ui.commons.Button({
@@ -345,14 +485,9 @@ sap.ui.jsview("view.Form", {
         tooltip : 'oRtt',
         text : 'Cancel',
         width : '10em',
+        enabled:false
         });
-    
-    
-    var oText = new sap.ui.commons.Label({
-        id:'text',
-        text:'Step 1 of 3',
-    
-    });
+
     
     
     var oButton2 = new sap.ui.commons.Button({
@@ -360,10 +495,11 @@ sap.ui.jsview("view.Form", {
         tooltip : 'oRtt',
         text : 'Continue',
         width : '10em',
+        enabled:false
         
         });
     
-    oMatrix2.createRow(oButton1,oText,oButton2)
+    oMatrix2.createRow(oButton1,oButton2)
 
     this.page.addContent(oMatrix1);
     this.page.addContent(oMatrix);

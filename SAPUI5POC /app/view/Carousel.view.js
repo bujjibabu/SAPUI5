@@ -11,6 +11,17 @@ sap.ui.jsview("view.Carousel", {
 			content: [],
 			footer: []
 		});
+        var Header = new sap.m.Bar({
+            contentLeft: [
+                new sap.ui.commons.Button({
+                 icon:"sap-icon://nav-back",
+                 press: function(){
+                    oController.goback();
+                 }
+               })
+            ]
+        });
+        this.page.addContent(Header);
         var oCarousel = new sap.ui.commons.Carousel("carousel", {});
 oCarousel.setWidth("100%");
 oCarousel.setOrientation("horizontal");

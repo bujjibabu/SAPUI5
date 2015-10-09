@@ -12,6 +12,17 @@ sap.ui.jsview("view.Table", {
 			footer: []
 		});
 
+		var Header = new sap.m.Bar({
+            contentLeft: [
+                new sap.ui.commons.Button({
+                 icon:"sap-icon://nav-back",
+                 press: function(){
+                    oController.goback();
+                 }
+               })
+            ]
+        });
+        this.page.addContent(Header);
 				 var aData = [
 		         	{lastName: "Dente", name: "Al", checked: true, linkText: "www.sap.com", href: "http://www.sap.com", src: "images/person1.gif", gender: "male", rating: 4},
 		         	{lastName: "Friese", name: "Andy", checked: true, linkText: "www.sap.com", href: "http://www.sap.com", src: "images/person2.gif", gender: "male", rating: 2},

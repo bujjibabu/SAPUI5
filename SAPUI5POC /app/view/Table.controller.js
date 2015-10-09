@@ -36,6 +36,11 @@ sap.ui.controller("view.Table", {
 		var link = evt.getSource().getBindingContext('links').getObject().link;
 		sap.m.URLHelper.redirect(link, true);
 
+	},
+
+	goback: function(){
+ var bus = sap.ui.getCore().getEventBus();
+  bus.publish("nav", "back");
 	}
 
 });

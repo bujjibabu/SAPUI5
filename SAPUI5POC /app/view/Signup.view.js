@@ -83,7 +83,7 @@ var oFname = quickhelp( new sap.ui.commons.TextField({
 	//id : 'TF-Name',
 	editable : true,
 	value : '',
-	width : '',required:true }),"Please Enter Name",true);
+	width : '200px',required:true }),"Please Enter Name",true);
 
 oLabel.setLabelFor(oFname);
 
@@ -136,7 +136,7 @@ oLabel = new sap.ui.commons.Label({
  	//id : 'Email',
  	text : 'Password',
   	required:true });
- oPwd = quickhelp(new sap.ui.commons.TextField({
+ oPwd = quickhelp(new sap.ui.commons.PasswordField({
  	//id : 'mail',
  	editable : true,
  	width : '200px'
@@ -148,7 +148,7 @@ oLabel = new sap.ui.commons.Label({
  	//id : 'Email',
  	text : 'Confirm Password',
  	required:true });
- oCPwd = quickhelp(new sap.ui.commons.TextField({
+ oCPwd = quickhelp(new sap.ui.commons.PasswordField({
  	//id : 'mail',
  	editable : true,
  	width : '200px'
@@ -273,7 +273,7 @@ oCell = new sap.ui.commons.layout.MatrixLayoutCell();
 oMatrix.createRow(oLabel, oMail);
 var oButton = new sap.ui.commons.Button({
 	//id:'button1',
-	text:'save',
+	text:'Save',
 	width:'100px',
 	press : function() { 
 	// alert("Hello") ;
@@ -289,7 +289,11 @@ var oButton = new sap.ui.commons.Button({
  localStorage.setItem(data.street,oStreet.getValue());
  localStorage.setItem(data.House,oHouse.getValue());
  localStorage.setItem(data.pwd,oPwd.getValue());
- alert("Values saved successfully")
+ var bus = sap.ui.getCore().getEventBus();
+		bus.publish("nav", "to", { 
+			id : "Login"
+		});
+
   }  
    
 });

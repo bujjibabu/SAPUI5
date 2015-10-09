@@ -15,7 +15,7 @@ sap.ui.jsview("view.Notes", {
 
         var noteTaker1 = new sap.suite.ui.commons.NoteTaker({
 
-            visibleNotes: 4,
+            visibleNotes: 3,
             attachmentUploadUrl: "../../../../../upload",
             attachmentSelect: function(e) {
                 jQuery.sap.log.info("NTF: Attachment was selected - " + e.getParameter("filename"));

@@ -289,26 +289,36 @@ margin-bottom:20px;
     opacity: 0.95;
     color: #fff !important;
     }
-    #__button0,#__button1,#__button3,#__button4{
+    #__button0,#__button1,#__button9,#__button10{
     background-color: #138FDA;
     color: white;
     border:none;
     }
     #matrix4{
     border-collapse: initial !important;
-    border: 1px solid #ccc;
     width:0 !important;
     margin: 0 auto;
     padding: 10px;
-    background-color:beige;}
+    padding-left: 20%;
+    opacity: 0.7;
+   }
     #__cell109{
-    text-align:center;}
+    text-align:center;
+}
+#TV-Head{
+	color:#4d5f6f;
+}
     #button1{
     width:100px;
      background-color: #138FDA;
      color:white;
     }
-    .sapUiLbl{
+    /*.sapUiLbl{
+ font-size: 13px;
+ font-weight: bold;
+ color:#fff;
+}*/
+ #__label0, #__label1{
  font-size: 13px;
  font-weight: bold;
  color:#fff;
@@ -360,7 +370,9 @@ background-color: #007cc0;
  width:100% !important;
  margin: 20px auto;
 }
-
+#__taker0-feeder-add-button{
+	left:64%;
+}
 #__image0{
     margin-left: 20%;
     margin-top: 3%;
@@ -374,7 +386,7 @@ background-color: #007cc0;
 	opacity: 0.88;
 }
 .mybackground1{
-	background-image: url('/images/world.png');
+	background-image: url('http://www.template-joomspirit.com/template-joomla/template-94/images/pattern/light_grey.jpg');
 	}
 
 	.sapUiLbl.sapUiLblReqEnd:after, .sapUiLbl.sapUiLblReqBeg:before{
@@ -390,3 +402,24 @@ background-color: #007cc0;
 		    width: 30px;
     margin-top: 4%;
 	}
+	   #__page10{
+
+    }
+
+   #__button2, #__button3, #__button4, #__button6, #__button5{
+    	margin-top: 10px;
+    	background-color: #f2f2f2!important;
+    	border: none;
+    }
+
+    #__button2-icon, #__button3-icon, #__button4-icon, #__button5-icon, #__button6-icon{
+    	font-size: 25px;
+    }
+
+    #matrix, #matrix1, #matrix2{
+    	margin: 15px;
+    }
+    #__label19,#__label20,#__label21,#__label22,
+    #__label23,#__label24,#__label25,#__label26,#__label27,#__label28,#__label29,#__label30{
+    	color:#4d5f6f;
+    }

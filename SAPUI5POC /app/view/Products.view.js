@@ -12,6 +12,17 @@ sap.ui.jsview("view.Products", {
 			footer: []
 		});
 
+        var Header = new sap.m.Bar({
+            contentLeft: [
+                new sap.ui.commons.Button({
+                 icon:"sap-icon://nav-back",
+                 press: function(){
+                    oController.goback();
+                 }
+               })
+            ]
+        });
+        this.page.addContent(Header);
 		var oMatrixlayout = new sap.ui.commons.layout.MatrixLayout({
             id: "matrixchart",
             columns: 2,
@@ -66,11 +77,56 @@ sap.ui.jsview("view.Products", {
             dataset: oDataset
         });
 
-var bBusy = !oColumnChart.isBusy();
-oColumnChart.setBusy(bBusy);
+
         oColumnChart.setModel(oModel);
-           oColumnChart.setBusyIndicatorDelay(100);
-           
+
+
+        var oDataset = new sap.viz.ui5.data.FlattenedDataset({
+            dimensions: [{
+                axis: 1,
+                name: 'Category',
+                value: '{Category/CategoryName}'
+            }],
+            measures: [
+                {
+                    name: 'Product',
+                    value: '{ProductID}'
+                }
+            ],
+            data: {
+                path: "/Products",
+                parameters: {
+                    select: 'ProductID,Category/CategoryName',
+                    expand: 'Category'
+                }
+            }
+        });
+
+
+        var oColumnMChart = new sap.viz.ui5.Column("col1",{
+            width: "100%",
+            height: "100%",
+            plotArea: {
+                'colorPalette': d3.scale.category20().range()
+            },
+            toolTip: {
+                visible: false
+            },
+            legend: {
+                visible: false
+            },
+            selectData: {
+
+            },
+            title: {
+                visible: true,
+                text: 'Products'
+            },
+            dataset: oDataset
+        });
+
+
+        oColumnMChart.setModel(oModel);
 
 
         var oDataset = new sap.viz.ui5.data.FlattenedDataset({
@@ -159,6 +215,47 @@ oColumnChart.setBusy(bBusy);
         var oDataset = new sap.viz.ui5.data.FlattenedDataset({
             dimensions: [{
                 axis: 1,
+                name: 'CategoryName',
+                value: "{CategoryName}"
+            }],
+            measures: [
+                {
+                    name: 'UnitPrice',
+                    value: '{UnitPrice}'
+                }, {
+                    name: 'ReorderLevel',
+                    value: '{ReorderLevel}'
+                }
+            ],
+            data: {
+                path: "/Alphabetical_list_of_products",
+                parameters: {
+                    select: 'UnitPrice,ReorderLevel,CategoryName'
+                }
+            }
+        });
+
+
+        var oStackedMColumn = new sap.viz.ui5.StackedColumn("SC",{
+            width: "100%",
+            height: "100%",
+            plotArea: {
+                //'colorPalette' : d3.scale.category20().range()
+            },
+            title: {
+                visible: true,
+                text: 'Alphabetical_list_of_products'
+            },
+            dataset: oDataset
+        });
+
+
+        oStackedMColumn.setModel(oModel);
+
+
+        var oDataset = new sap.viz.ui5.data.FlattenedDataset({
+            dimensions: [{
+                axis: 1,
                 name: 'Country',
                 value: "{Country}"
             }],
@@ -190,6 +287,40 @@ oColumnChart.setBusy(bBusy);
             dataset: oDataset
         });
         oLine.setModel(oModel);
+         var oDataset = new sap.viz.ui5.data.FlattenedDataset({
+            dimensions: [{
+                axis: 1,
+                name: 'Country',
+                value: "{Country}"
+            }],
+            measures: [
+                {
+                    name: 'Freight',
+                    value: '{Freight}'
+                }
+            ],
+            data: {
+                path: "/Orders_Qries",
+                parameters: {
+                    select: 'Freight,Country'
+                }
+            }
+        });
+
+
+        var oMLine = new sap.viz.ui5.Line("LC",{
+            width: "100%",
+            height: "100%",
+            plotArea: {
+                //'colorPalette' : d3.scale.category20().range()
+            },
+            title: {
+                visible: true,
+                text: 'Orders_Qries'
+            },
+            dataset: oDataset
+        });
+        oMLine.setModel(oModel);
 
         oMatrixlayout.createRow({
             height: '500px'
@@ -271,6 +402,41 @@ oColumnChart.setBusy(bBusy);
             dataset: oDataset
         });
         oArea.setModel(oModel);
+               var oDataset = new sap.viz.ui5.data.FlattenedDataset({
+            dimensions: [{
+                axis: 1,
+                name: 'CategoryName',
+                value: "{CategoryName}"
+            }],
+            measures: [{
+                name: 'UnitPrice',
+                value: '{UnitPrice}'
+            }, {
+                name: 'ReorderLevel',
+                value: '{ReorderLevel}'
+            }],
+            data: {
+                path: "/Alphabetical_list_of_products",
+                parameters: {
+                    select: 'UnitPrice,ReorderLevel,CategoryName'
+                }
+            }
+        });
+        var oMArea = new sap.viz.ui5.Area("MC",{
+            width: "100%",
+            height: "400px",
+            plotArea: {
+               colorPalette: [
+                    '#00FF00', '#FFC200', '#FF0000'
+                ]
+            },
+            title: {
+                visible: true,
+                text: 'Orders_Qries'
+            },
+            dataset: oDataset
+        });
+        oMArea.setModel(oModel);
 
         oMatrixlayout.createRow({
             height: '500px'

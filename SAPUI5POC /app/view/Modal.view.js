@@ -12,6 +12,17 @@ sap.ui.jsview("view.Modal", {
 			footer: []
 		});
 
+		var Header = new sap.m.Bar({
+            contentLeft: [
+                new sap.ui.commons.Button({
+                 icon:"sap-icon://nav-back",
+                 press: function(){
+                    oController.goback();
+                 }
+               })
+            ]
+        });
+        this.page.addContent(Header);
 	var oTwoDaysAgo = new Date();
 	oTwoDaysAgo.setDate(oTwoDaysAgo.getDate() - 2);
 	var oFinanceArticle = new sap.suite.ui.commons.FeedItem({
