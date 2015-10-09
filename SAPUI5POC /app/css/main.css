@@ -360,15 +360,19 @@ margin-bottom:20px;
     color: indigo;
     font-size: 16px;
 }
+.sapUiAcdSectionHdr,
+.sapUiAcdSectionCont{
+	margin-right: 10%;
+}
 .sapUiAcdSectionHdr>div{
     font-size: 12px;
+
     margin-top: 10px;
     height: 35px;
     padding-top: 10px;
 }
 .sapUiAcd.ui-sortable{
 	background: #f4f5f5;
-	box-shadow: 2px 2px 8px #ccc;
 	border: none;
 }
 .sapUiAcdSectionHdr{
