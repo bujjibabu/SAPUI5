@@ -12,6 +12,11 @@
     /* opacity: 0.8; */
     color: #fff;
 }
+.sapUiTabSel{
+	background: #f4f5f5 !important;
+	color:#444 !important;
+	border-bottom: 2px solid rgba(37, 45, 46, 0.62) !important
+}
 .sapUiTab:hover, .sapUiTabSel:hover{
 	border:none !important;
 	    outline: none;
@@ -41,8 +46,9 @@
 }
 
 .sapMTileContent{
-	box-shadow: 2px 2px 8px #ccc;
+	box-shadow: 2px 2px 5px #767272;
     color: #444;
+    background-color: #cfd8dc;
 }
 .sapMStdTileTitle{
 	color: #444;
