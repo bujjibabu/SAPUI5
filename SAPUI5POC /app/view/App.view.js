@@ -33,14 +33,17 @@ sap.ui.jsview("view.App", {
 				   sap.ui.commons.MessageBox.show("Are you sure want to logoff from this page?",
 				    sap.ui.commons.MessageBox.Icon.INFORMATION,
 				    "Logoff Confirmation",
-				     [sap.ui.commons.MessageBox.Action.OK,sap.ui.commons.MessageBox.Action.CANCEL],function(){
-				     	var apph = sap.ui.getCore().byId("appheader");
+				     [sap.ui.commons.MessageBox.Action.OK,sap.ui.commons.MessageBox.Action.CANCEL],function(oEvent){
+				     	if(oEvent == "OK"){
+
+				     var apph = sap.ui.getCore().byId("appheader");
 					apph.setDisplayWelcome(false);
 					apph.setDisplayLogoff(false);
 				     	var bus = sap.ui.getCore().getEventBus();
 							bus.publish("nav", "to", { 
 								id : "Login"
 							});
+						}
 
 				     }
 				   ); 

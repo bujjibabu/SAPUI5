@@ -47,6 +47,8 @@ sap.ui.controller("view.Login", {
 			id : "Main"
 		});
 			//window.location.href="https://sapui5.netweaver.ondemand.com/sdk/#test-resources/sap/ui/commons/demokit/MatrixLayout.html";
+		} else {
+			alert("Invalid Credentials");
 		}
 		
 	},
