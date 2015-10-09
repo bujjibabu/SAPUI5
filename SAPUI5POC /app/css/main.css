@@ -295,7 +295,7 @@ margin-bottom:20px;
     margin: 0 auto;
     background-color: #070707;
     top: 150px;
-    opacity: 0.95;
+    opacity: 0.7;
     color: #fff !important;
     }
     #__button0,#__button1,#__button9,#__button10{
@@ -395,7 +395,7 @@ background-color: #007cc0;
 	opacity: 0.88;
 }
 .mybackground1{
-	background-image: url('http://www.template-joomspirit.com/template-joomla/template-94/images/pattern/light_grey.jpg');
+	background-image: url('/images/sap2.jpg');
 	}
 
 	.sapUiLbl.sapUiLblReqEnd:after, .sapUiLbl.sapUiLblReqBeg:before{
