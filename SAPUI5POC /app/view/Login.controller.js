@@ -38,7 +38,7 @@ sap.ui.controller("view.Login", {
 	
 
 	save: function(name , pwd){
-		if (name == "John" && pwd == "Smith" ){
+		if (name == localStorage.getItem("userName") && pwd == localStorage.getItem("pwd") ){
 			var apph = sap.ui.getCore().byId("appheader");
 					apph.setDisplayWelcome(true);
 					apph.setDisplayLogoff(true);

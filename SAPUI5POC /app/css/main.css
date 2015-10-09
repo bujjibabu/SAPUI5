@@ -70,6 +70,10 @@
  		background-color:#988B6C;
  	}
 
+ 	.sapMBarChild{
+		color:white;
+	}
+
  	/*........................................................*/
 
  	@charset "UTF-8";
