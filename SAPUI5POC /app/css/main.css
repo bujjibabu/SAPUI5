@@ -79,10 +79,6 @@
  		background-color:#988B6C;
  	}
 
- 	.sapMBarChild{
-		color:white;
-	}
-
  	/*........................................................*/
 
  	@charset "UTF-8";
@@ -307,7 +303,9 @@ margin-bottom:20px;
     width:0 !important;
     margin: 0 auto;
     padding: 10px;
-    background-color:beige;}
+    background-color: #0E0D0D;
+    opacity: 0.6;
+}
     #__cell109{
     text-align:center;}
     #button1{
@@ -336,12 +334,13 @@ margin-bottom:20px;
     background-color: #8C8A8A;
 }
 .suiteUiCard{
- margin:20px 0 20px 45px;
+ margin: 15px 0 0px 40px;
  box-shadow: 3px 3px 7px #868282;
  background-color: #fff;  
 }
 .sapUiTabPanel {
     background-color: #f4f5f5 !important;
+    padding-left: 6%;
 }
 .sapUiFTV strong, .sapUiFTVBold{
 	 font-weight: bold;
@@ -381,7 +380,7 @@ background-color: #007cc0;
 	opacity: 0.88;
 }
 .mybackground1{
-	background-image: url('/images/world.png');
+	background: #f4f5f5;
 	}
 
 	.sapUiLbl.sapUiLblReqEnd:after, .sapUiLbl.sapUiLblReqBeg:before{
